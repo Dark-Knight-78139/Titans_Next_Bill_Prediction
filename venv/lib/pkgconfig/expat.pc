@@ -1,0 +1,13 @@
+prefix=/Users/aryanverma/Desktop/Titans_Next_bill_prediction/Titans_Next_Bill_Prediction/venv
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: expat
+Version: 2.9.0
+Description: expat XML parser
+URL: https://libexpat.github.io/
+Libs: -L${libdir} -lexpat
+Libs.private: -lm
+Cflags: -I${includedir}
+Cflags.private: -DXML_STATIC

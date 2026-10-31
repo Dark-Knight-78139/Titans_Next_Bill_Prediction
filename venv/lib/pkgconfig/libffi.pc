@@ -1,0 +1,11 @@
+prefix=/Users/aryanverma/Desktop/Titans_Next_bill_prediction/Titans_Next_Bill_Prediction/venv
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/Users/aryanverma/Desktop/Titans_Next_bill_prediction/Titans_Next_Bill_Prediction/venv/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.8
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}
