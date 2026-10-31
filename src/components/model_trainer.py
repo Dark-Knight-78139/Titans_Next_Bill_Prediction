@@ -34,11 +34,7 @@ class ModelTrainer:
       models ={
        "Random Forest": RandomForestRegressor(),
        "Decision Tree": DecisionTreeRegressor(),
-       "Gradient Boosting": GradientBoostingRegressor(),
        "Linear Regression": LinearRegression(),
-       "K-Neighbors Classifier": KNeighborsRegressor(),
-       "XGBClassifier":XGBRegressor(),
-       "CatBoosting Classifier": CatBoostRegressor(verbose=False),
        "AdaBoost Classifier": AdaBoostRegressor(),
       }
       params={
@@ -77,6 +73,8 @@ class ModelTrainer:
 
       predicted=best_model.predict(X_test)
       r2_square = r2_score(y_test,predicted)
-      return best_model,r2_square
+      mae=mae(y_test,predicted)
+      rmse=rmse(y_test,predicted)
+      return r2_square,
     except Exception as e:
       raise CustomException(e,sys)

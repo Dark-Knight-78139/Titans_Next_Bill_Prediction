@@ -4,7 +4,7 @@ import os
 import sys
 import dill
 from src.exception import CustomException
-from sklearn.metrics import r2_score
+from sklearn.metrics import r2_score,mean_squared_error,mean_absolute_error
 from sklearn.model_selection import GridSearchCV
 
 def save_object(file_path,obj):
